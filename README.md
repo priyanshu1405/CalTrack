@@ -59,8 +59,11 @@ charts for the user to visualize his food consumption better.
   <br>
   Meals of the User.
 </p>
+<br>
+
+For more information, read the [**Project Report**](https://github.com/priyanshu1405/CalTrack/blob/main/DBMS_Report.pdf).
 
 ## Authors
-Priyanshu Kumawat & Sai Prabhat Gubbala<br>
+[**Priyanshu Kumawat**](https://github.com/priyanshu1405) & [**Sai Prabhat Gubbala**](https://github.com/saipr0)<br>
 Data Science & AI<br>
 IIIT Naya Raipur
