@@ -31,22 +31,23 @@ charts for the user to visualize his food consumption better.
 ## CalTrack Insights
 
 <p align="center">   
-  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image1.png"  />
-    <br>
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image1.png" style="transform: scale(0.75);" />
+  <br>
 </p>
 <p align="center">   
-  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image2.png" />
-    <br>
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image2.png" style="transform: scale(0.75);" />
+  <br>
 </p>
 <p align="center">   
-  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image3.png"/>
-    <br>
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image3.png" style="transform: scale(0.75);" />
+  <br>
 </p>
 <p align="center">   
-  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image4.png" />
-    <br>
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image4.png" style="transform: scale(0.75);" />
+  <br>
 </p>
 <p align="center">   
-  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image5.png" />
-    <br>
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image5.png" style="transform: scale(0.75);" />
+  <br>
 </p>
+
