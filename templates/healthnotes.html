@@ -1,0 +1,369 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Left Sidebar - Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% load static%}
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css'%}" /></noscript>
+        <style>
+            .logo {
+                color: #e44c65;
+            }
+
+            .meallist {
+                color:#f5f5f5;
+                font-family: 'Pacifico', cursive;
+            }
+        </style>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+            <header id="header">
+                <h1 id="logo" ><a href="index.html" class="logo" ><b>Cal-Track</b></a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="mealadd.html">Add meal</a></li>
+                        <li>
+                            <a href="#">Recipes</a>
+                            <ul>
+                                <li><a href="customrecipes.html">Custom Recipes</a></li>
+                                <li><a href="right-sidebar.html">Menu</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="healthnotes.html">Health-Notes</a></li>
+                        <li><a href="profile.html" class="button icon"><i class="fa-solid fa-user"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Health Notes</h2>
+						</header>
+                        <form method="post" action="" class="">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-10">
+                                    <textarea name="notetoday" id="message" placeholder="Was today healthy or was it your cheat day? or had a stomachache? Note it down in a health note!" rows="3"></textarea>
+                                </div>
+                                <div class="col-2">
+                                    <select name="category" id="category">
+                                        <option value="">- Category -</option>
+                                        <option value="1">felt ill today</option>
+                                        <option value="2">Healthy Day</option>
+                                        <option value="3">Cheat Day</option>
+                                    </select>
+                                    <h1></h1>
+                                    <input type="submit" class="button fit primary" value="Add">
+                                </div>
+                            </div>
+                        </form>
+                        {% if noteadded %}
+                        <div class="row">
+                            <h5>Note added succesfully for today</h5>
+                        </div>
+                        {% else %}
+                        {% endif %}
+                        <header class="major">
+                            <h3><i>Your previous notes</i></h3>
+                        </header>
+                        <form method="post" action="" class="">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-3"></div>
+                                <div class="col-3"><input type="date" name="fetchmeal" class = "button" id=""></div>
+                                <div class="col-2"><input type="submit" class="button fit primary" value="Search"></div>
+                                <div class="col-4"></div>
+                            </div>
+                        </form>
+                        <div class="content">
+                            <div class="row">
+                                <header>
+                                    <h3><b style="color: {{note_color1}}">Note 1</b></h3>
+                                    <h5>{{notedate1}}</h5>
+                                    <p>{{notetext1}}</p>
+                                </header>
+                            </div>
+                        </div>  
+                    </div>
+				</div>
+                <div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Your meals</h2>
+						</header>
+						<!-- Content -->
+                        <div class="row gtr-150">
+                            <div class="col-8">
+                                <h3>Breakfast</h3>
+								<div class="row">
+                                    <div class="col-2">
+                                        <h5>S.No</h5>
+                                    </div>
+                                    <div class="col-8">
+                                        <h5>Meal</h5>
+                                    </div>
+                                    <div class="col-2">
+                                        <h5>Calories</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <h1 class="meallist">{{bsno1}}</h1>
+                                        <h1 class="meallist">{{bsno2}}</h1>
+                                        <h1 class="meallist">{{bsno3}}</h1>
+                                        <h1 class="meallist">{{bsno4}}</h1>
+                                        <h1 class="meallist">{{bsno5}}</h1>
+                                        <h1 class="meallist">{{bsno6}}</h1>
+                                        <h1 class="meallist">{{bsno7}}</h1>
+                                        <h1 class="meallist">{{bsno8}}</h1>
+                                        <h1 class="meallist">{{bsno9}}</h1>
+                                        <h1 class="meallist">{{bsno10}}</h1>
+                                    </div>
+                                    <div class="col-8">
+                                        <h1 class="meallist">{{bmeal1}}</h1>
+                                        <h1 class="meallist">{{bmeal2}}</h1>
+                                        <h1 class="meallist">{{bmeal3}}</h1>
+                                        <h1 class="meallist">{{bmeal4}}</h1>
+                                        <h1 class="meallist">{{bmeal5}}</h1>
+                                        <h1 class="meallist">{{bmeal6}}</h1>
+                                        <h1 class="meallist">{{bmeal7}}</h1>
+                                        <h1 class="meallist">{{bmeal8}}</h1>
+                                        <h1 class="meallist">{{bmeal9}}</h1>
+                                        <h1 class="meallist">{{bmeal10}}</h1>
+                                    </div>
+                                    <div class="col-2">
+                                        <h1 class="meallist">{{bcal1}}</h1>
+                                        <h1 class="meallist">{{bcal2}}</h1>
+                                        <h1 class="meallist">{{bcal3}}</h1>
+                                        <h1 class="meallist">{{bcal4}}</h1>
+                                        <h1 class="meallist">{{bcal5}}</h1>
+                                        <h1 class="meallist">{{bcal6}}</h1>
+                                        <h1 class="meallist">{{bcal7}}</h1>
+                                        <h1 class="meallist">{{bcal8}}</h1>
+                                        <h1 class="meallist">{{bcal9}}</h1>
+                                        <h1 class="meallist">{{bcal10}}</h1>
+                                    </div>
+								</div>  
+                            </div>
+                            <div class="col-4">
+                                <span class="image fit"><img src="{% static 'images/brooke-lark-HlNcigvUi4Q-unsplash.jpg'%}" alt=""/></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row gtr-150">
+                            <div class="col-8">
+                                <h3>Lunch</h3>
+								<div class="row">
+                                    <div class="col-2">
+                                        <h5>S.No</h5>
+                                    </div>
+                                    <div class="col-8">
+                                        <h5>Meal</h5>
+                                    </div>
+                                    <div class="col-2">
+                                        <h5>Calories</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <h1 class="meallist">{{lsno1}}</h1>
+                                        <h1 class="meallist">{{lsno2}}</h1>
+                                        <h1 class="meallist">{{lsno3}}</h1>
+                                        <h1 class="meallist">{{lsno4}}</h1>
+                                        <h1 class="meallist">{{lsno5}}</h1>
+                                        <h1 class="meallist">{{lsno6}}</h1>
+                                        <h1 class="meallist">{{lsno7}}</h1>
+                                        <h1 class="meallist">{{lsno8}}</h1>
+                                        <h1 class="meallist">{{lsno9}}</h1>
+                                        <h1 class="meallist">{{lsno10}}</h1>
+                                    </div>
+                                    <div class="col-8">
+                                        <h1 class="meallist">{{lmeal1}}</h1>
+                                        <h1 class="meallist">{{lmeal2}}</h1>
+                                        <h1 class="meallist">{{lmeal3}}</h1>
+                                        <h1 class="meallist">{{lmeal4}}</h1>
+                                        <h1 class="meallist">{{lmeal5}}</h1>
+                                        <h1 class="meallist">{{lmeal6}}</h1>
+                                        <h1 class="meallist">{{lmeal7}}</h1>
+                                        <h1 class="meallist">{{lmeal8}}</h1>
+                                        <h1 class="meallist">{{lmeal9}}</h1>
+                                        <h1 class="meallist">{{lmeal10}}</h1>
+                                    </div>
+                                    <div class="col-2">
+                                        <h1 class="meallist">{{lcal1}}</h1>
+                                        <h1 class="meallist">{{lcal2}}</h1>
+                                        <h1 class="meallist">{{lcal3}}</h1>
+                                        <h1 class="meallist">{{lcal4}}</h1>
+                                        <h1 class="meallist">{{lcal5}}</h1>
+                                        <h1 class="meallist">{{lcal6}}</h1>
+                                        <h1 class="meallist">{{lcal7}}</h1>
+                                        <h1 class="meallist">{{lcal8}}</h1>
+                                        <h1 class="meallist">{{lcal9}}</h1>
+                                        <h1 class="meallist">{{lcal10}}</h1>
+                                    </div>
+								</div>
+                            </div>
+                            <div class="col-4">
+                                <span class="image fit"><img src="{% static 'images//nerfee-mirandilla-UgKVWZuCxCk-unsplash.jpg'%}" alt=""/></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row gtr-150">
+                            <div class="col-8">
+                                <h3>Snacks</h3>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <h5>S.No</h5>
+                                    </div>
+                                    <div class="col-8">
+                                        <h5>Meal</h5>
+                                    </div>
+                                    <div class="col-2">
+                                        <h5>Calories</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <h1 class="meallist">{{ssno1}}</h1>
+                                        <h1 class="meallist">{{ssno2}}</h1>
+                                        <h1 class="meallist">{{ssno3}}</h1>
+                                        <h1 class="meallist">{{ssno4}}</h1>
+                                        <h1 class="meallist">{{ssno5}}</h1>
+                                        <h1 class="meallist">{{ssno6}}</h1>
+                                        <h1 class="meallist">{{ssno7}}</h1>
+                                        <h1 class="meallist">{{ssno8}}</h1>
+                                        <h1 class="meallist">{{ssno9}}</h1>
+                                        <h1 class="meallist">{{ssno10}}</h1>
+                                    </div>
+                                    <div class="col-8">
+                                        <h1 class="meallist">{{smeal1}}</h1>
+                                        <h1 class="meallist">{{smeal2}}</h1>
+                                        <h1 class="meallist">{{smeal3}}</h1>
+                                        <h1 class="meallist">{{smeal4}}</h1>
+                                        <h1 class="meallist">{{smeal5}}</h1>
+                                        <h1 class="meallist">{{smeal6}}</h1>
+                                        <h1 class="meallist">{{smeal7}}</h1>
+                                        <h1 class="meallist">{{smeal8}}</h1>
+                                        <h1 class="meallist">{{smeal9}}</h1>
+                                        <h1 class="meallist">{{smeal10}}</h1>
+                                    </div>
+                                    <div class="col-2">
+                                        <h1 class="meallist">{{scal1}}</h1>
+                                        <h1 class="meallist">{{scal2}}</h1>
+                                        <h1 class="meallist">{{scal3}}</h1>
+                                        <h1 class="meallist">{{scal4}}</h1>
+                                        <h1 class="meallist">{{scal5}}</h1>
+                                        <h1 class="meallist">{{scal6}}</h1>
+                                        <h1 class="meallist">{{scal7}}</h1>
+                                        <h1 class="meallist">{{scal8}}</h1>
+                                        <h1 class="meallist">{{scal9}}</h1>
+                                        <h1 class="meallist">{{scal10}}</h1>
+                                    </div>
+								</div>
+							</div>
+                            <div class="col-4">
+                                <span class="image fit"><img src="{% static 'images/ola-mishchenko-VRB1LJoTZ6w-unsplash.jpg'%}" alt=""/></span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row gtr-150">
+                            <div class="col-8">
+                                <h3>Dinner</h3>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <h5>S.No</h5>
+                                    </div>
+                                    <div class="col-8">
+                                        <h5>Meal</h5>
+                                    </div>
+                                    <div class="col-2">
+                                        <h5>Calories</h5>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <h1 class="meallist">{{dsno1}}</h1>
+                                        <h1 class="meallist">{{dsno2}}</h1>
+                                        <h1 class="meallist">{{dsno3}}</h1>
+                                        <h1 class="meallist">{{dsno4}}</h1>
+                                        <h1 class="meallist">{{dsno5}}</h1>
+                                        <h1 class="meallist">{{dsno6}}</h1>
+                                        <h1 class="meallist">{{dsno7}}</h1>
+                                        <h1 class="meallist">{{dsno8}}</h1>
+                                        <h1 class="meallist">{{dsno9}}</h1>
+                                        <h1 class="meallist">{{dsno10}}</h1>
+                                    </div>
+                                    <div class="col-8">
+                                        <h1 class="meallist">{{dmeal1}}</h1>
+                                        <h1 class="meallist">{{dmeal2}}</h1>
+                                        <h1 class="meallist">{{dmeal3}}</h1>
+                                        <h1 class="meallist">{{dmeal4}}</h1>
+                                        <h1 class="meallist">{{dmeal5}}</h1>
+                                        <h1 class="meallist">{{dmeal6}}</h1>
+                                        <h1 class="meallist">{{dmeal7}}</h1>
+                                        <h1 class="meallist">{{dmeal8}}</h1>
+                                        <h1 class="meallist">{{dmeal9}}</h1>
+                                        <h1 class="meallist">{{dmeal10}}</h1>
+                                    </div>
+                                    <div class="col-2">
+                                        <h1 class="meallist">{{dcal1}}</h1>
+                                        <h1 class="meallist">{{dcal2}}</h1>
+                                        <h1 class="meallist">{{dcal3}}</h1>
+                                        <h1 class="meallist">{{dcal4}}</h1>
+                                        <h1 class="meallist">{{dcal5}}</h1>
+                                        <h1 class="meallist">{{dcal6}}</h1>
+                                        <h1 class="meallist">{{dcal7}}</h1>
+                                        <h1 class="meallist">{{dcal8}}</h1>
+                                        <h1 class="meallist">{{dcal9}}</h1>
+                                        <h1 class="meallist">{{dcal10}}</h1>
+                                    </div>
+								</div>
+                            </div>
+                            <div class="col-4">
+                                <span class="image fit"><img src="{% static 'images/annie-spratt-oT7_v-I0hHg-unsplash.jpg'%}" alt=""/></span>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+            <script src="{% static 'assets/js/jquery.min.js'%}"></script>
+            <script src="{% static 'assets/js/jquery.scrolly.min.js'%}"></script>
+            <script src="{% static 'assets/js/jquery.dropotron.min.js'%}"></script>
+            <script src="{% static 'assets/js/jquery.scrollex.min.js'%}"></script>
+            <script src="{% static 'assets/js/browser.min.js'%}"></script>
+            <script src="{% static 'assets/js/breakpoints.min.js'%}"></script>
+            <script src="{% static 'assets/js/util.js'%}"></script>
+            <script src="{% static 'assets/js/main.js'%}"></script>
+            <script src="https://kit.fontawesome.com/10c0c12419.js" crossorigin="anonymous"></script>
+	</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Left Sidebar - Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% load static%}
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css'%}" /></noscript>
+        <style>
+            .logo {
+                color: #e44c65;
+            }
+
+            .meallist {
+                color:#f5f5f5;
+                font-family: 'Pacifico', cursive;
+            }
+        </style>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+            <header id="header">
+                <h1 id="logo" ><a href="index.html" class="logo" ><b>Cal-Track</b></a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="mealadd.html">Add meal</a></li>
+                        <li>
+                            <a href="#">Recipes</a>
+                            <ul>
+                                <li><a href="customrecipes.html">Custom Recipes</a></li>
+                                <li><a href="right-sidebar.html">Menu</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="healthnotes.html">Health-Notes</a></li>
+                        <li><a href="profile.html" class="button icon"><i class="fa-solid fa-user"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Edit Profile</h2>
+							<p> <i> “Healthy eating is a way of life, so it's important to establish <br>
+                                routines that are simple, realistically, and ultimately livable.” - Horace </i> </p>
+						</header>
+						<div class="row gtr-150">
+							<div class="col-3 col-12-medium">
+								<!-- Sidebar -->
+									<section id="sidebar">
+                                        <form method="post" action="" class="">
+                                            {% csrf_token %}
+                                            <section>
+                                                <h3>Bio</h3>
+                                                <div class="row">
+                                                    <h5>Dob:</h5>
+                                                    <div>
+                                                        <input type="date" name='dob' style="width: fit-content;" class="button" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <h1>&nbsp</h1>
+                                                <div class="row">
+                                                    <h5>Gender:</h5>
+                                                    <div>
+                                                        <div><input type="text" name='gender' style="width: fit-content;" placeholder=""></div>
+                                                    </div>
+                                                </div>
+                                                <h1>&nbsp</h1>
+                                                <div class="row">
+                                                    <h5>Address:</h5>
+                                                    <div>
+                                                        <div><textarea name="address" id="message" placeholder="" rows="6" style="width:fit-content;"></textarea></div>
+                                                    </div>
+                                                </div>      
+                                                <h1>&nbsp</h1>     
+                                                <div class="row">
+                                                    <h5>Email:</h5>
+                                                    <div><input type="text" name='email' style="width:fit-content;" placeholder=""></div>
+                                                </div>
+                                            </section>
+                                            <hr/>
+                                            <section>
+                                                <div class="row">
+                                                    <h3>Medical History</h3>
+                                                    <div><textarea name="medical" id="message" placeholder="" rows="6" style="width: fit-content;"></textarea></div>
+                                                </div>
+                                                <h1>&nbsp</h1>
+                                                <input type="submit" value="Update" class="button primary">
+                                            </section>
+                                        </form>
+									</section>
+							</div>
+							<div class="col-8 col-12-medium">
+
+								<!-- Content -->
+									<section id="content">
+										<h3>Calorie Chart</h3>
+										<p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.</p>
+										<p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique.</p>
+										<h3>Weight Chart</h3>
+										<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus.</p>
+										<ul>
+											<li>Faucibus orci lobortis ac adipiscing integer.</li>
+											<li>Col accumsan arcu mi aliquet placerat.</li>
+											<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
+											<li>Blandit massa non blandit tempor interdum.</li>
+											<li>Lacinia mattis arcu nascetur lobortis.</li>
+										</ul>
+                                        <header class="major">
+                                        </header>
+                                        <section id="content">
+                                            <h3>Track Your Weight & Height</h3>
+                                            <p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.</p>
+                                            <form method="post" action="" class="">
+                                                {% csrf_token %}
+                                                <div class="row">
+                                                    <div class="col-5">
+                                                        <h4>Height</h4>
+                                                        <input type="text" name='height'>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <h4>Weight</h4>
+                                                        <input type="text" name='weight'>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <h4>&nbsp</h4>
+                                                        <input type="submit" value="add">
+                                                    </div>
+                                                </div>
+                                                <h5></h5>
+                                                {% if height1 and weight1 %}
+                                                <div class="row">
+                                                    <div class="col-5">
+                                                        <h3>{{height1}}</h3>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <h3>{{weight1}}</h3>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <a href="" class="button icon"><i class="fa-solid fa-trash"></i></a>
+                                                    </div>
+                                                </div>
+                                                {% else %}
+                                                {% endif %}
+                                                {% if height2 and weight2 %}
+                                                <div class="row">
+                                                    <div class="col-5">
+                                                        <h3>{{height2}}</h3>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <h3>{{weight2}}</h3>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <a href="#" class="button icon"><i class="fa-solid fa-trash"></i></a>
+                                                    </div>
+                                                </div>
+                                                {% else %}
+                                                {% endif %}
+                                                {% if height3 and weight3 %}
+                                                <div class="row">
+                                                    <div class="col-5">
+                                                        <h3>{{height3}}</h3>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <h3>{{weight3}}</h3>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <a href="#" class="button icon"><i class="fa-solid fa-trash"></i></a>
+                                                    </div>
+                                                </div>
+                                                {% else %}
+                                                {% endif %}
+                                                {% if height4 and weight4 %}
+                                                <div class="row">
+                                                    <div class="col-5">
+                                                        <h3>{{height4}}</h3>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <h3>{{weight4}}</h3>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <a href="#" class="button icon"><i class="fa-solid fa-trash"></i></a>
+                                                    </div>
+                                                </div>
+                                                {% else %}
+                                                {% endif %}
+                                                {% if height5 and weight5 %}
+                                                <div class="row">
+                                                    <div class="col-5">
+                                                        <h3>{{height5}}</h3>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <h3>{{weight5}}</h3>
+                                                    </div>
+                                                    <div class="col-2">
+                                                        <a href="#" class="button icon"><i class="fa-solid fa-trash"></i></a>
+                                                    </div>
+                                                </div>
+                                                {% else %}
+                                                {% endif %}
+                                            </form>
+                                            
+                                            <ul>
+                                                <li>Faucibus orci lobortis ac adipiscing integer.</li>
+                                                <li>Col accumsan arcu mi aliquet placerat.</li>
+                                                <li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
+                                                <li>Blandit massa non blandit tempor interdum.</li>
+                                                <li>Lacinia mattis arcu nascetur lobortis.</li>
+                                            </ul>
+                                        </section>
+									</section>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+            <script src="{% static 'assets/js/jquery.min.js'%}"></script>
+            <script src="{% static 'assets/js/jquery.scrolly.min.js'%}"></script>
+            <script src="{% static 'assets/js/jquery.dropotron.min.js'%}"></script>
+            <script src="{% static 'assets/js/jquery.scrollex.min.js'%}"></script>
+            <script src="{% static 'assets/js/browser.min.js'%}"></script>
+            <script src="{% static 'assets/js/breakpoints.min.js'%}"></script>
+            <script src="{% static 'assets/js/util.js'%}"></script>
+            <script src="{% static 'assets/js/main.js'%}"></script>
+            <script src="https://kit.fontawesome.com/10c0c12419.js" crossorigin="anonymous"></script>
+	</body>
+</html>

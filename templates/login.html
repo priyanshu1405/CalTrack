@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		{% load static %}
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css'%}" /></noscript>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  </head>
+  <body class="">
+    
+
+    <div>
+        <!-- Banner -->
+        <section id="two" class="spotlight style2 right">
+            <span class="image fit main "><img style="object-fit: contain;" src="{% static './images/victoria-shes-UC0HZdUitWY-unsplash.jpg'%}" alt="dsdsdsd"/></span>
+        <div class="content">
+            <div>
+            <header>
+                <h2>Cal-Track</h2>
+                <p>Welcome back! What's the count of calories today?</p>
+            </header>
+            </div>
+            <form method="post" action="" class="cta">
+                {% csrf_token %}
+                <div><h3>Username</h3></div>
+                <input
+                    type="text"
+                    name="username"
+                    id="text"
+                    placeholder="Your Username"
+                />
+                <h3></h3>
+                <div><h3>Password</h3></div>
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Your Password"
+                />
+                <h2></h2>
+                <input type="submit" value="Login" class="fit primary" />
+            </form>
+            <div>
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            </div>
+            </div>
+        </section>
+    </div>
+
+        <!-- Scripts -->
+        <script src="{% static 'assets/js/jquery.min.js'%}"></script>
+        <script src="{% static 'assets/js/jquery.scrolly.min.js'%}"></script>
+        <script src="{% static 'assets/js/jquery.dropotron.min.js'%}"></script>
+        <script src="{% static 'assets/js/jquery.scrollex.min.js'%}"></script>
+        <script src="{% static 'assets/js/browser.min.js'%}"></script>
+        <script src="{% static 'assets/js/breakpoints.min.js'%}"></script>
+        <script src="{% static 'assets/js/util.js'%}"></script>
+        <script src="{% static 'assets/js/main.js'%}"></script>
+        <script src="https://kit.fontawesome.com/10c0c12419.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>

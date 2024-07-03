@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Left Sidebar - Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        {% load static%}
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css'%}" /></noscript>
+        <style>
+            .logo {
+                color: #e44c65;
+            }
+
+            .meallist {
+                color:#f5f5f5;
+                font-family: 'Pacifico', cursive;
+            }
+        </style>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+            <header id="header">
+                <h1 id="logo" ><a href="index.html" class="logo" ><b>Cal-Track</b></a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="mealadd.html">Add meal</a></li>
+                        <li>
+                            <a href="#">Recipes</a>
+                            <ul>
+                                <li><a href="customrecipes.html">Custom Recipes</a></li>
+                                <li><a href="right-sidebar.html">Menu</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="healthnotes.html">Health-Notes</a></li>
+                        <li><a href="profile.html" class="button icon"><i class="fa-solid fa-user"></i></a></li>
+                    </ul>
+                </nav>
+            </header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+                            <h2>Make Custom Recipes!</h2>
+                            <p><i>"A recipe has no soul. You as the cook, must <b>bring soul</b> to the recipe." - Thomas Keller</i></p>
+                        </header>
+                        {% if added %}
+                        <div class="row">
+                            <h4>Added Succesfully</h4>
+                        </div>
+                        {% else %}
+                        {% endif %}
+                        {% if notvalid %}
+                        <div class="row">
+                            <h4>Fill all the required blanks</h4>
+                        </div>
+                        {% else %}
+                        {% endif %}
+                        {% if exist %}
+                        <div class="row">
+                            <h4>A custom recipe of that food name already exists</h4>
+                        </div>
+                        {% else %}
+                        {% endif %}
+                        <form method="post" action="" class="">
+                            {% csrf_token %}
+                            <div class="row gtr-150">
+                                <div class="col-4">
+                                    <h4>Food Name:</h4>
+                                    <input type="text" name='foodname' style="width: fit-content;" placeholder="Dosa">
+                                </div>
+                                <div class="col-4">
+                                    <h4>Calories:</h4>
+                                    <input type="text" name='calories' style="width: fit-content;" placeholder="kcal">
+                                </div>
+                                <div class="col-4">
+                                    <h4>Serving / Quantity</h4>
+                                    <input type="text" name='serving' style="width: fit-content;" placeholder="in grams">
+                                </div>
+                            </div>
+                            <p></p>
+                            <div class="row gtr-150">
+                                <div class="col-4">
+                                    <h4>Protein:</h4>
+                                    <input type="text" name='protein' style="width: fit-content;" placeholder="in grams">
+                                </div>
+                                <div class="col-4">
+                                    <h4>Carbohydrates:</h4>
+                                    <input type="text" name='carbohydrates' style="width: fit-content;" placeholder="in grams">
+                                </div>
+                                <div class="col-4">
+                                    <h4>Fat:</h4>
+                                    <input type="text" name='fat' style="width: fit-content;" placeholder="in grams">
+                                </div>
+                            </div>
+                            <p></p>
+                            <h5 style="text-align: center;"><i><u>Additional information:</u></i></h5>
+                            <p></p>
+                            <div class="row gtr-150">
+                                <div class="col-4">
+                                    <h4>Fat Saturated:</h4>
+                                    <input type="text" name='fat_sat' style="width: fit-content;" placeholder="in grams">
+                                </div>
+                                <div class="col-4">
+                                    <h4>Sodium:</h4>
+                                    <input type="text" name='sodium' style="width: fit-content;" placeholder="in milligrams">
+                                </div>
+                                <div class="col-4">
+                                    <h4>Potassium:</h4>
+                                    <input type="text" name='potassium' style="width: fit-content;" placeholder="in milligrams">
+                                </div>
+                            </div>
+                            <p></p>
+                            <div class="row gtr-150">
+                                <div class="col-4">
+                                    <h4>Cholesterol:</h4>
+                                    <input type="text" name='cholesterol' style="width: fit-content;" placeholder="in milligrams">
+                                </div>
+                                <div class="col-4">
+                                    <h4>Fiber:</h4>
+                                    <input type="text" name='fiber' style="width: fit-content;" placeholder="in grams">
+                                </div>
+                                <div class="col-4">
+                                    <h4>Sugar:</h4>
+                                    <input type="text" name='sugar' style="width: fit-content;" placeholder="in grams">
+                                </div>
+                            </div>
+                            <p></p>
+                            <div class="row">
+                                <div class="col-5"></div>
+                                <div class="col-2"><input type="submit" class="button fit primary" value="Add"></div>
+                                <div class="col-5"></div>
+                            </div>
+                        </form>
+                        <p>&nbsp</p> 
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+		</div>
+
+		<!-- Scripts -->
+            <script src="{% static 'assets/js/jquery.min.js'%}"></script>
+            <script src="{% static 'assets/js/jquery.scrolly.min.js'%}"></script>
+            <script src="{% static 'assets/js/jquery.dropotron.min.js'%}"></script>
+            <script src="{% static 'assets/js/jquery.scrollex.min.js'%}"></script>
+            <script src="{% static 'assets/js/browser.min.js'%}"></script>
+            <script src="{% static 'assets/js/breakpoints.min.js'%}"></script>
+            <script src="{% static 'assets/js/util.js'%}"></script>
+            <script src="{% static 'assets/js/main.js'%}"></script>
+            <script src="https://kit.fontawesome.com/10c0c12419.js" crossorigin="anonymous"></script>
+	</body>
+</html>
