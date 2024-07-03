@@ -31,7 +31,7 @@ charts for the user to visualize his food consumption better.
 ## CalTrack Insights
 
 <p align="center">   
-  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image1.png" style="transform: scale(0.75);" />
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image1.png" style="transform: scale(0.1);" />
   <br>
 </p>
 <p align="center">   
