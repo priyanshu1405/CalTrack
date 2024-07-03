@@ -1,8 +1,14 @@
 # CalTrack
 
-<p align="center">   
-    <a href="https://api-ninjas.com/" alt="API-Ninjas">
-      <img src="https://res.cloudinary.com/apideck/icons/api-ninjas/w=27,h=27" /></a>
-    <a href="https://www.djangoproject.com/" alt="Django">
-      <img src="https://imagedelivery.net/qc7VvyphMGWFiPVvTbB-ww/swapps.com/2019/04/django-faster.jpg/w=48,h=27" /></a>
-</p>
+## Tools Used
+Python
+
+## Abstract
+Tracking your intake is the first step to having a healthy physique. Taking 
+this one step can enable someone to see harmful trends and make wiser decisions. 
+We are developing a database management system that allows the user to 
+do the same and tracks and stores the daily food intake of a person. Using an 
+API, we will generate automated food nutrition analysis and reports containing 
+charts for the user to visualize his food consumption better.
+
+
