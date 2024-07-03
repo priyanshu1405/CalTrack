@@ -31,23 +31,32 @@ charts for the user to visualize his food consumption better.
 ## CalTrack Insights
 
 <p align="center">   
-  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image1.png" style="transform: scale(0.1);" />
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image1.png" />
   <br>
+  Adding the meal information by user.
 </p>
+<br>
 <p align="center">   
-  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image2.png" style="transform: scale(0.75);" />
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image2.png" />
   <br>
+  Nutritional values of a recipe.
 </p>
+<br>
 <p align="center">   
-  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image3.png" style="transform: scale(0.75);" />
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image3.png" />
   <br>
+  Creating a health note.
 </p>
+<br>
 <p align="center">   
-  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image4.png" style="transform: scale(0.75);" />
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image4.png" />
   <br>
+  Health Note on a specified date.
 </p>
+<br>
 <p align="center">   
-  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image5.png" style="transform: scale(0.75);" />
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image5.png" />
   <br>
+  Meals of the User.
 </p>
 
