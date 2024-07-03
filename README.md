@@ -27,3 +27,26 @@ charts for the user to visualize his food consumption better.
 • **Development of Back-End**: We utilized the Django framework along with a MySQL database to perform CRUD operations, including insertion, deletion, updating, and scanning of data. <br>
 • **Integrating Front-end with Back-end**: We set up proper paths and displayed the appropriate data on the front-end using POST/GET requests. Additionally, we incorporated data visualization tools. <br>
 • **Deployment of the Website**: Finally, we deployed our website onto a local host, making it available for users. <br>
+
+## CalTrack Insights
+
+<p align="center">   
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image1.png" width="700" height="350" />
+    <br>
+</p>
+<p align="center">   
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image2.png" width="700" height="350" />
+    <br>
+</p>
+<p align="center">   
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image3.png" width="700" height="350" />
+    <br>
+</p>
+<p align="center">   
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image4.png" width="700" height="350" />
+    <br>
+</p>
+<p align="center">   
+  <img src="https://github.com/priyanshu1405/CalTrack/blob/main/imgs/image5.png" width="700" height="350" />
+    <br>
+</p>
