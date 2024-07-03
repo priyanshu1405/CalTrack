@@ -60,3 +60,7 @@ charts for the user to visualize his food consumption better.
   Meals of the User.
 </p>
 
+## Authors
+Priyanshu Kumawat & Sai Prabhat Gubbala<br>
+Data Science & AI<br>
+IIIT Naya Raipur
